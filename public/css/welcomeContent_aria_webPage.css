@@ -1,0 +1,156 @@
+
+
+/*start welcomeContent*/
+
+
+#containerWelcome{
+  position: relative;
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  /*margin-bottom: 10px;*/
+}
+#contentWelcome{
+  position: relative;
+  width: 80%;
+  float: left;
+  /*display: block;*/
+  margin-bottom: 20px;
+}
+
+#solucionesEmpresariales{
+  position: relative;
+  width: 20%;
+  /*height: 400px;*/
+  float: left;
+  /*display: block;*/
+  /*background-color: #4682B4;*/
+  /*border-right: 2px solid #4682B4; */
+  /*margin-bottom: 20px;*/
+  /*box-shadow: 0px 0px 5px #4682B4;*/
+}
+.carouselContainer{
+  width: 80%;
+  float: right;
+  /*margin-bottom:20px;*/
+  /*height: 90%;*/
+  
+}
+#divUbicacion{
+  position: relative;
+  width: 20%;
+  height: 400px;
+  /*display: block;*/
+  float: right;
+  /*box-shadow: 0px 0px 5px #4682B4;*/
+  /*background-color: #B0C4DE;*/
+  /*background-color: #4682B4;*/
+  /*border-color: 1px solid #4682B4;*/
+  margin-bottom: 20px;
+}
+
+.imgUbicacion{
+  position: relative;
+  width: 90%;
+  height:90%;
+  margin-left: 20px;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: auto;
+}
+#divEncabSolEmp{
+  position: relative;
+  width: 90%;
+  margin: auto;
+  border-bottom: 2px solid #4682B4 !important; 
+}
+#encabSolEmp{
+  position: relative;
+  color: #4682B4 !important;
+}
+#imgAspel{
+  position: relative;
+  width: 90%;
+  height: 120px;
+  margin: auto;
+  margin-top: 5px;
+}
+#divMenuAspel{
+  position: relative;
+  width: 90%;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  /*color: #4682B4 !important;*/
+}
+.btnMenuAspel{
+  border: 1px solid #4682B4 !important;
+  border-radius: 4px;
+}
+.textContent{
+  text-align: justify;
+  /*font-size: 24px;*/
+  /*padding-bottom: 100px;*/
+  /*border: none !important;*/
+}
+
+/*star carousel welcomeContent*/
+
+.navInner{
+  /*height: 50%;*/
+  border-bottom: 2px solid #D3D3D3;
+  margin-bottom: 10px;
+}
+
+.navSlider
+{
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    background-color: #fff !important;
+}
+.imgCarousel{
+  position: relative;
+  width: 50%;
+  height: 400px;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.navSlider > li {
+  position: relative;
+  /*display: block;*/
+}
+.navSlider > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+.navSlider > li > a:hover,
+.navSlider > li > a:focus {
+  text-decoration: none;
+  background-color: #D3D3D3;
+}
+#tiemporealCarousel .navSlider a small
+{
+   display: block;
+}
+#tiemporealCarousel .navSlider
+{
+    background: #eee;
+}
+.nav-justified > li > a
+{
+    border-radius: 0px;
+}
+.nav-pills>li[data-slide-to="0"].active a { background-color:  #4682B4; }
+.nav-pills>li[data-slide-to="1"].active a { background-color:  #4682B4; }
+.nav-pills>li[data-slide-to="2"].active a { background-color:  #4682B4; }
+.nav-pills>li[data-slide-to="3"].active a { background-color:  #4682B4; }
+/*end carousel welcomeContent*/
+/*end wecomeContent*/
+
+
+
+
+

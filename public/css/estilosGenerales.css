@@ -1,0 +1,25 @@
+.btnHeaderActive{
+	background-color: #4682B4;
+	color: #fff !important;
+}
+.btnHeader:hover{
+	background-color: #D3D3D3;
+}
+.btnGeneral{
+	background-color: #4682B4;
+	border: 1px solid #4682B4;
+}
+.btnGeneral:hover{
+	background-color: #D3D3D3;
+	border: 1px solid #D3D3D3;
+}
+.btnGeneral:focus{
+	background-color: #4682B4;
+  	background-position: 0 -15px;
+}
+.textGeneral{
+	color:#4682B4;
+}
+.btn-product{
+	width: 100%;
+}

@@ -1,0 +1,96 @@
+/*start Header*/
+.navBarHeader{
+  /*position: absolute;*/
+  top: 0px;
+  /*background-color: #B0C4DE;*/
+  /*background-color: #4682B4;*/
+  background-color: #ffffff;
+  border-bottom: 2px solid #DC143C;
+  /*border-bottom: 5px solid #D3D3D3;*/
+  /*color: white !important;*/
+  border-top:none !important;
+  border-left:none !important;
+  border-right:none !important;
+  margin-top: 0px;
+  /*font-family: 'Lato';*/
+}
+
+.linkHead{
+  /*color: #DC143C !important;*/
+  /*color: #D3D3D3 !important;*/
+}
+.navMenu{
+  position: relative;
+  /*width: 100%;*/
+  /*padding-top: 20px;*/
+  padding-bottom: 5px;
+  padding-right: 10px;
+  /*color: #DC143C !important;*/
+}
+
+.linkLogo{
+  position: relative;
+  float: left;
+  /*padding-top: 20px;*/
+  /*width: 100%;*/
+}
+.imgLogo{
+  position: relative;
+  /*width: 80%;*/
+  height: 100px;
+  /*padding-top: 5px;*/
+  padding-bottom: 5px;
+  padding-right: 10px;
+  /*float: left;*/
+}
+#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #ffffff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+/*end welcomeHeader*/

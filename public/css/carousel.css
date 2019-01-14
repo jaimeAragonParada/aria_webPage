@@ -1,0 +1,38 @@
+
+.navSlider
+{
+    padding-left: 0;
+  	margin-bottom: 0;
+  	list-style: none;
+}
+
+.navSlider > li {
+  position: relative;
+  /*display: block;*/
+}
+.navSlider > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+.navSlider > li > a:hover,
+.navSlider > li > a:focus {
+  text-decoration: none;
+  background-color: #eee;
+}
+#welcomeCarousel .navSlider a small
+{
+   display: block;
+}
+#welcomeCarousel .navSlider
+{
+    background: #eee;
+}
+.nav-justified > li > a
+{
+    border-radius: 0px;
+}
+.nav-pills>li[data-slide-to="0"].active a { background-color: #16a085; }
+.nav-pills>li[data-slide-to="1"].active a { background-color: #e67e22; }
+.nav-pills>li[data-slide-to="2"].active a { background-color: #2980b9; }
+.nav-pills>li[data-slide-to="3"].active a { background-color: #8e44ad; }
