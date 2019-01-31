@@ -1,22 +1,23 @@
 @if (Auth::guest())
-  <nav class="navbar navbar-default navBarHeader" role="navigation">
+  <!-- <nav class="navBarHeader navbar navbar-default " role="navigation"> -->
+  <nav class="navBarHeader navbar navbar-expand-lg mb-4 top-bar navbar-static-top sps sps--abv" role="navigation">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <a class="linkLogo" href="#"><img alt="" class="imgLogo" src="{{asset('images/logoAria2.jpeg')}}"></a>
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <button type="button" class="navbar-toggle collapsed button-collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+          <span class="icon-bar button-collapsed"></span>
+          <span class="icon-bar button-collapsed"></span>
+          <span class="icon-bar button-collapsed"></span>
         </button>     
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse navMenu" id="bs-example-navbar-collapse-1">
+      <div class="collapse navbar-collapse navMenu " id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav ">
           @if($activo_head=="bienvenido")       
             <li class="active "><a href="#" class="linkHead">Bienvenido</a></li>
-            <li ><a href="#" class="linkHead">Conócenos</a></li>                
+            <li ><a href="#conocenos" class="linkHead">Conócenos</a></li>                
             <li class="dropdown ">
               <a href="#" class="dropdown-toggle linkHead" data-toggle="dropdown">Productos <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">

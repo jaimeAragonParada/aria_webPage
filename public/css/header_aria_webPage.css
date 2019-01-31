@@ -1,3 +1,6 @@
+
+@color: #D3D3D3;
+
 /*start Header*/
 .navBarHeader{
   /*position: absolute;*/
@@ -5,8 +8,8 @@
   /*background-color: #B0C4DE;*/
   /*background-color: #4682B4;*/
   background-color: #ffffff;
-  border-bottom: 2px solid #DC143C;
-  /*border-bottom: 5px solid #D3D3D3;*/
+  /*border-bottom: 2px solid #DC143C;*/
+  border-bottom: 1px solid @color;
   /*color: white !important;*/
   border-top:none !important;
   border-left:none !important;
@@ -14,10 +17,12 @@
   margin-top: 0px;
   /*font-family: 'Lato';*/
 }
-
+.button-collapsed{
+  border: 1px solid #D3D3D3;
+}
 .linkHead{
   /*color: #DC143C !important;*/
-  /*color: #D3D3D3 !important;*/
+  color: #D3D3D3 !important;
 }
 .navMenu{
   position: relative;

@@ -1,0 +1,9 @@
+@color: #D3D3D3;
+
+.header-less {
+  color: @color;
+  border-bottom: 1px solid @color;
+}
+h2 {
+  color: @color;
+}
