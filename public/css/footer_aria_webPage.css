@@ -1,4 +1,5 @@
 /* start welcomeFooter*/
+@color: #D3D3D3;
 #divFooter{
   position: relative;
   /*margin-top: 10px;*/
@@ -11,8 +12,11 @@
   position: relative;
   padding-top: 20px;
   /*border-top: 2px solid #D3D3D3;*/
-  background-color: #000000;
+  /*background-color: #000000;*/
   /*background-color:#DC143C;*/
+  /*background: rgba(255,0,0,0.8);*/
+  background-color: #B22222;
+
 }
 .bg-primary {
  /*background-color: #6D1A42 !important;*/
@@ -31,6 +35,7 @@
   border-radius: 50%;
 }
 
+
 .bg-circle-outline
 {
   display: inline-block;
@@ -42,6 +47,8 @@
   border-color: smoke;
   border-radius: 50%;
 }
+
+
 
 .bg-circle a, a:hover, .media a:focus
 {

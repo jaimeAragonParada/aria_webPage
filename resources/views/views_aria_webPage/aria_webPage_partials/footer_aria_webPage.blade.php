@@ -6,7 +6,7 @@
           <div class="col-md-9">
             <p class="text-white">Instrumentos Aria "El Arte Musical"</p>
             <p class="text-white">Instrumentos Musicales-Audio e Iluminación</p>
-            <p class="text-white">Melchor Ocampo 10C, Tercera Secc, 70400 Tlacolula de Matamoros, Oax.</p>
+            <p class="text-white">Melchor Ocampo 10C, Tercera Sección, 70400 Tlacolula de Matamoros, Oaxaca</p>
             <p class="text-white">Teléfono: 01 951 562 1650</p>
             <p class="text-white"> Todos los Derechos Reservados</p>
           </div>

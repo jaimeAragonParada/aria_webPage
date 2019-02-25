@@ -18,16 +18,16 @@
           @if($activo_head=="bienvenido")       
             <li class="active "><a href="#" class="linkHead">Bienvenido</a></li>
             <li ><a href="#conocenos" class="linkHead">Conócenos</a></li>                
-            <li class="dropdown ">
+            <li class="dropdown liHead">
               <a href="#" class="dropdown-toggle linkHead" data-toggle="dropdown">Productos <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#" class="linkHead">Marcas</a></li>
+                <li><a href="#productos_categoria">Categorias</a></li>
                 <li class="divider"></li>
-                <li><a href="#" class="linkHead">Categoría</a></li>                        
+                <li><a href="#productos_marca">Marcas</a></li>                            
               </ul>
-            </li> 
-            <li ><a href="" class="linkHead">Contacto</a></li>
-            <li ><a href="" class="linkHead">Ubicación</a></li>                    
+            </li>
+            <li ><a href="" class="linkHead" data-toggle="modal" data-target="#contactoModal">Contacto</a></li>
+            <li ><a href="" class="linkHead" data-toggle="modal" data-target="#ubicacionModal">Ubicación</a></li>                    
           @endif
           @if($activo_head=="conocenos")        
             <li class=""><a href="/aria_webPage/public">Bienvenido</a></li>
@@ -68,12 +68,32 @@
                 <li><a href="#">Categoría</a></li>                            
               </ul>
             </li> 
-            <li ><a href="" class="liHead">Contacto</a></li>
+            <li ><a href="" class="liHead" >Contacto</a></li>
             <li ><a href="">Ubicación</a></li>                      
           @endif       
-        </ul>     
-        <!-- <ul class="nav navbar-nav navbar-right">        
-          <li class="dropdown">
+        </ul> 
+        <!-- <div class="socialButtons"> -->
+          <div class="col-md-3 text-center center-block socialButtons">
+            <div class="d-inline-block ">
+              <div class="bg-circle d-inline-block social-buttons-circle">
+                <a href="https://web.facebook.com/pages/category/Musical-Instrument-Store/Instrumentos-Aria-261188704062874/?_rdc=1&_rdr" class="text-white"><i class="fa fa-2x fa-fw fa-facebook"></i>
+                </a>
+              </div>
+              <div class="bg-circle d-inline-block social-buttons-circle">
+                <a href="">
+                  <i class="fa fa-2x fa-fw fa-twitter"></i></a>
+              </div>
+
+              <div class="bg-circle d-inline-block social-buttons-circle">
+                <a href="#" class="text-white">
+                  <i class="fa fa-2x fa-fw fa-youtube"></i></a>
+              </div>
+            </div>
+          </div> 
+        <!-- </div>    -->
+        <!-- <ul class="nav navbar-nav navbar-right"> -->
+        
+          <!-- <li class="dropdown">
             <a href="#" class="dropdown-toggle linkHead" data-toggle="dropdown" role="button" aria-expanded="false"><b>Iniciar sesión</b> <span class="caret"></span></a>
             <ul id="login-dp" class="dropdown-menu">
               <li>
@@ -113,8 +133,8 @@
                   </div>
               </li>
             </ul>
-          </li>
-        </ul> -->
+          </li> -->      
+        <!-- </ul> -->
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
@@ -231,105 +251,90 @@
 @endif
 
 <!-- Star registerModal -->
-<div class="modal fade windowModal" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade windowModal" id="contactoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title textGeneral" id="myModalLabel">Registro</h4>
+        <h4 class="modal-title textGeneral" id="myModalLabel">Contacto</h4>
       </div>
-      <div class="modal-body">
-          <!-- <form class="form-horizontal" role="form" method="POST" action="{{ url('auth/register') }}" accept-charset="UTF-8" id=""> -->
-            @if($activo_menu=="computadoras")
-              
-              <form class="form-horizontal" role="form" method="POST" action="{{ url('auth/register') }}" accept-charset="UTF-8" id="">
-              
-            @else
-              <form class="form-horizontal" role="form" method="POST" action="{{ url('../auth/register') }}" accept-charset="UTF-8" id="">
-            @endif                
-        
-            <input type="hidden" name="_token" value="{{ csrf_token() }}" >
+      <!-- <div class="modal-body"> -->
+        <div class="col-md-12 bodyContacto">
+            <!-- <div class="well well-sm "> -->
+                <form class="form-horizontal" method="post" action="">
+                  <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <fieldset>
+                        <!-- <legend class="text-center header">Estamos para servirte</legend> -->
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="fname" name="nombre" type="text" placeholder="Nombre" class="form-control" required>
+                            </div>
+                        </div>
+                        <!-- <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="lname" name="name" type="text" placeholder="Last Name" class="form-control">
+                            </div>
+                        </div> -->
 
-            <div class="form-group">
-              <label class="col-md-4 control-label textGeneral">Nombre</label>
-              <div class="col-md-6">
-                <input type="text" class="form-control" name="name" value="{{ old('name') }}" required>
-              </div>
-            </div>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="email" name="email" type="text" placeholder="Email" class="form-control" required>
+                            </div>
+                        </div>
 
-            <div class="form-group">
-              <label class="col-md-4 control-label textGeneral">Correo electrónico</label>
-              <div class="col-md-6">
-                <input type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-              </div>
-            </div>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="phone" name="telefono" type="text" placeholder="Telefono" class="form-control" required>
+                            </div>
+                        </div>
 
-            <div class="form-group">
-              <label class="col-md-4 control-label textGeneral" >Contraseña</label>
-              <div class="col-md-6">
-                <input type="password" class="form-control" name="password" minlength="6" required>
-              </div>
-            </div>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                            <div class="col-md-8">
+                                <textarea class="form-control" id="message" name="mensaje" placeholder="Escriba su mensaje" rows="7" resize="false" required></textarea>
+                            </div>
+                        </div>
 
-            <div class="form-group">
-              <label class="col-md-4 control-label textGeneral">Confirmar contraseña</label>
-              <div class="col-md-6">
-                <input type="password" class="form-control" name="password_confirmation" minlength="6" required>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <div class="col-md-6 col-md-offset-4">
-                <button type="submit" class="btn btn-primary btnGeneral">
-                  Registrar
-                </button>
-              </div>
-            </div>
-          </form>
-       
-      </div>
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            <!-- </div> -->
+        </div>
+      <!-- </div> -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary btnGeneral" data-dismiss="modal">Cerrar</button>        
+        <!-- <button type="button" class="btn btn-primary btnGeneral" data-dismiss="modal">Cerrar</button>         -->
       </div>
     </div>
   </div>
 </div>
 <!-- End registerModal -->
 
-<!-- Star resetPassModal -->
-<div class="modal fade windowModal" id="resetPassModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<!-- Star ubucacionModal -->
+<div class="modal fade windowModal" id="ubicacionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title textGeneral" id="myModalLabel" >Restablecer contraseña</h4>
+        <h4 class="modal-title textGeneral" id="myModalLabel">Ubicación</h4>
       </div>
-      <div class="modal-body">         
-
-          <form class="form-horizontal" role="form" method="POST" action="password/email">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-            <div class="form-group">
-              <label class="col-md-4 control-label textGeneral" >Correo electrónico</label>
-              <div class="col-md-6">
-                <input type="email" class="form-control" name="email" value="{{ old('email') }}" required="required">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <div class="col-md-6 col-md-offset-4">
-                <button type="submit" class="btn btn-primary btnGeneral">
-                  Aceptar
-                </button>
-              </div>
-            </div>
-          </form>
-        
-      </div>
+      <!-- <div class="modal-body"> -->
+        <div class="col-md-12 bodyContacto">
+            <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15265.134272195071!2d-96.4764783!3d16.9605964!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc0c0efd9060f2b7e!2sInstrumentos+Aria!5e0!3m2!1ses-419!2smx!4v1549859862517" frameborder="0" allowfullscreen></iframe>
+        </div>
+      <!-- </div> -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary btnGeneral" data-dismiss="modal">Cerrar</button>        
+        <!-- <button type="button" class="btn btn-primary btnGeneral" data-dismiss="modal">Cerrar</button>         -->
       </div>
     </div>
   </div>
 </div>
-<!-- End resetPassModal -->
+<!-- End ubicacionModal -->
+
